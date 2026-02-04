@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 1 - Excel</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <a id="p2" href="../../index.html"><img id="logo" src="../../EXCEL/img/Logo de Slide Dash en Graffiti.png" alt=""></a>
+        <nav>
+            <a class="m2" href="../excel.html">Atras</a>
+        </nav>
+    </header>
+
+    <div class="contenedor-modulo">
+        <h1 class="titulo-modulo">INTRODUCCIÓN A EXCEL</h1>
+
+        <div class="video-container">
+            <div class="tile-decoration"></div>
+            <div class="video-header">
+                <h1 class="video-title">Video Destacado</h1>
+                <p class="video-subtitle">Aprende Excel paso a paso</p>
+            </div>
+
+            <div class="video-wrapper">
+                <video controls poster="https://via.placeholder.com/800x450/217346/ffffff?text=Excel+Preview">
+                    <source src="execel.mp4" type="video/mp4">
+                    
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+                <div class="video-overlay">
+                    <button class="play-button" onclick="togglePlay()"></button>
+                </div>
+            </div>
+
+            <div class="video-controls">
+                <button class="control-btn" onclick="toggleFullscreen()">📺 Pantalla Completa</button>
+                <button class="control-btn" onclick="toggleMute()">🔇 Silenciar</button>
+                <button class="control-btn" onclick="changeSpeed()">⚡ Velocidad</button>
+            </div>
+
+            <div class="video-info">
+                <p>HD • 1080p • Aprende Excel desde cero</p>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="score-panel">
+                <div>🏆 Puntos: <span id="score">0</span></div>
+                <div class="level-indicator">Nivel: <span id="level">Principiante</span></div>
+                <div>📊 Juego: <span id="current-game">Quiz Excel</span></div>
+            </div>
+
+            <div class="game-nav">
+                <button class="nav-btn active" onclick="switchGame('quiz')">🧠 Quiz Excel</button>
+                <button class="nav-btn" onclick="switchGame('match')">🔗 Relacionar Conceptos</button>
+                <button class="nav-btn" onclick="switchGame('formula')">🧩 Completar Fórmulas</button>
+            </div>
+
+            <div class="game-area">
+                <div id="quiz-game" class="game-section">
+                    <div class="quiz-question" id="quiz-question">
+                        ¡Cargando pregunta...!
+                    </div>
+                    <div class="quiz-options" id="quiz-options">
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="nextQuestion()" id="next-question" style="display: none;">
+                            Siguiente Pregunta ➡️
+                        </button>
+                    </div>
+                </div>
+
+                <div id="match-game" class="game-section game-hidden">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <h2 style="color: #00d4ff;">🔗 Relaciona Conceptos de Excel</h2>
+                        <p style="font-size: 18px;">Arrastra cada término a su definición correcta</p>
+                    </div>
+
+                    <div class="match-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="terms-column"
+                            style="background: rgba(0, 212, 255, 0.1); padding: 20px; border-radius: 15px;">
+                            <h3 style="color: #00d4ff; text-align: center;">Términos</h3>
+                            <div class="match-term" draggable="true" data-match="1">Hoja de cálculo</div>
+                            <div class="match-term" draggable="true" data-match="2">Celda</div>
+                            <div class="match-term" draggable="true" data-match="3">Fila</div>
+                            <div class="match-term" draggable="true" data-match="4">Columna</div>
+                        </div>
+
+                        <div class="definitions-column"
+                            style="background: rgba(0, 212, 255, 0.1); padding: 20px; border-radius: 15px;">
+                            <h3 style="color: #00d4ff; text-align: center;">Definiciones</h3>
+                            <div class="match-definition" data-match="3">Conjunto horizontal de celdas (1, 2, 3...)
+                            </div>
+                            <div class="match-definition" data-match="2">Intersección entre fila y columna (A1, B2...)
+                            </div>
+                            <div class="match-definition" data-match="4">Conjunto vertical de celdas (A, B, C...)</div>
+                            <div class="match-definition" data-match="1">Documento principal de Excel con celdas
+                                organizadas</div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="checkMatchGame()">✅ Verificar</button>
+                        <button class="nav-btn" onclick="resetMatchGame()">🔄 Reiniciar</button>
+                    </div>
+                </div>
+
+                <div id="formula-game" class="game-section game-hidden">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <h2 style="color: #00d4ff;">🧩 Completa la Fórmula</h2>
+                        <p style="font-size: 18px;">Arrastra las partes faltantes a la fórmula correcta</p>
+                    </div>
+
+                    <div class="formula-exercise"
+                        style="background: rgba(0, 0, 0, 0.4); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                        <h3 style="color: #00d4ff;">Sumar los valores de A1 a A5</h3>
+                        <div class="formula-container"
+                            style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 80px;">
+                            <div class="formula-part" style="font-size: 24px;">=</div>
+                            <div class="formula-dropzone" data-expected="SUMA"></div>
+                            <div class="formula-part" style="font-size: 24px;">(</div>
+                            <div class="formula-dropzone" data-expected="A1:A5"></div>
+                            <div class="formula-part" style="font-size: 24px;">)</div>
+                        </div>
+                    </div>
+
+                    <div class="formula-pieces"
+                        style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                        <div class="formula-piece" draggable="true" data-value="SUMA">SUMA</div>
+                        <div class="formula-piece" draggable="true" data-value="PROMEDIO">PROMEDIO</div>
+                        <div class="formula-piece" draggable="true" data-value="A1:A5">A1:A5</div>
+                        <div class="formula-piece" draggable="true" data-value="B1:B5">B1:B5</div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="checkFormulaGame()">✅ Verificar</button>
+                        <button class="nav-btn" onclick="resetFormulaGame()">🔄 Reiniciar</button>
+                    </div>
+                </div>
+
+                <div id="identify-game" class="game-section game-hidden">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <h2 style="color: #00d4ff;">🔍 Identifica las Partes de Excel</h2>
+                        <p style="font-size: 18px;">Haz clic en la parte de Excel que se te pide</p>
+                    </div>
+
+                    <div style="text-align: center; margin: 20px 0; font-size: 20px;">
+                        <p>Haz clic en: <span id="target-part" style="color: #0ff; font-weight: bold;">Barra de
+                                fórmulas</span></p>
+                    </div>
+
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="https://support.content.office.net/es-es/media/4c4a7f6a-f2a6-4d6b-9e56-0b0a9a9b0b4d.png"
+                            alt="Interfaz de Excel"
+                            style="max-width: 100%; border: 2px solid #0ff; border-radius: 10px;">
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button class="nav-btn" onclick="nextIdentifyPart()">Siguiente ➡️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="logica.js"></script>
+
+</html>

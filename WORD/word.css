@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face {
+    font-family: 'pixel';
+    src: url(../FUENTES/AVENGEANCE\ HEROIC\ AVENGER.ttf);
+
+}
+
+@font-face {
+    font-family: 'texto';
+    src: url(../FUENTES/Coolvetica\ Rg.otf);
+
+}
+
+@font-face {
+    font-family: 'titulooffice';
+    src: url(../FUENTES/AVENGEANCE\ HEROIC\ AVENGER.ttf);
+}
+
+@font-face {
+    font-family: 'tarjetas';
+    src: url(../FUENTES/kindergarten.ttf);
+}
+
+@font-face {
+    font-family: 'decoracion1';
+    src: url(../FUENTES/Crushed\ Candy.otf);
+}
+
+@font-face {
+    font-family: 'decoracion2';
+    src: url(../FUENTES/JugendstilOrnamente.ttf);
+}
+
+@font-face {
+    font-family: 'decoracion3';
+    src: url(../FUENTES/ARTESANIA\ display.otf);
+}
+
+
+body{
+    background-color: black;
+}
+
+.btn-continuar {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #03558b;
+    border-radius: 10px;
+    font-family: 'decoracion3';
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #0236855b;
+}
+
+.separar {
+    margin-left: -1.5%;
+    display: flex;
+    gap: 15px;
+
+}
+
+.btn-continuar:hover {
+    background-color: #008cff;
+    color: black;
+    transform: scale(1.05);
+}
+
+
+
+#p1 {
+    width: 5%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.m1 {
+    text-decoration: none;
+    color: aliceblue;
+    transition: 0.9;
+    font-family: 'pixel';
+    font-size: 30px;
+    height: 5vh;
+    margin-top: 5%;
+
+
+}
+
+.m1:hover {
+    background: linear-gradient(135deg,
+            rgb(88, 199, 211) 0%,
+            rgb(88, 199, 211) 20%,
+            rgb(88, 199, 211) 35%,
+            rgb(88, 199, 211) 50%,
+            #479db0 70%,
+            #479db0 85%,
+            #479db0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+
+}
+
+.fondoword {
+    background-image: url(../WORD/1147364.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+
+
+}
+.separar ul {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+.separar li {
+    margin: 10px 0; 
+}
+
+.wordsito {
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+#worsito1 {
+    width: 60%;
+    margin-top: 40%;
+    margin-left: 30%;
+}
+
+.btn5 {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-family: 'decoracion3';
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #0236855b;
+}
+
+.nose1 {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.btn5:hover {
+    background-color: rgb(88, 199, 211);
+    color: black;
+    transform: scale(1.05);
+}
+
+#t1 {
+    color: rgb(88, 199, 211);
+    font-family: 'decoracion3';
+    font-size: 55px;
+}
+
+#t2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: aliceblue;
+
+}
+
+ul {
+    text-decoration: none;
+    color: aliceblue;
+    margin-top: 5%;
+    margin-left: 2%;
+    font-size: 25px;
+}
+
+footer {
+    background-color: black;
+    height: 4.6vh;
+    color: aliceblue;
+    padding-top: 6%;
+    font-size: 25px;
+}
+
+#fote1 {
+    margin-left: 4%;
+}
+header {
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(5px);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo {
+    width: 150px;
+
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+.m1 {
+    text-decoration: none;
+    font-family: 'pixel', sans-serif;
+    font-size: 2rem;
+
+    color: aliceblue;
+    transition: background 0.3s, transform 0.3s;
+
+    background: linear-gradient(135deg,
+            rgb(32, 139, 201) 0%,
+            rgb(32, 139, 201)20%,
+            rgb(32, 139, 201) 35%,
+            rgb(32, 139, 201) 50%,
+            rgb(32, 139, 201) 70%,
+            rgb(32, 139, 201) 85%,
+            rgb(32, 139, 201)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.m1:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg,
+            rgb(32, 139, 201) 0%,
+            rgb(32, 139, 201)20%,
+            rgb(111, 111, 111) 35%,
+            rgb(32, 139, 201) 50%,
+            rgb(78, 78, 78) 70%,
+            rgb(32, 139, 201) 85%,
+            rgb(32, 139, 201)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

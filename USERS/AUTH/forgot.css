@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    background-image: url(IMG/retrowave-puesta-del-sol_5120x2880_xtrafondos.com.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-container {
+    background-color: rgba(18, 5, 25, 0.8);
+    padding: 50px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.6);
+    text-align: center;
+}
+
+.auth-title {
+    color: #FF00FF; /* Bold, single color for a clean look */
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: #D3D3D3; /* A soft, subtle placeholder color */
+}
+
+.form-control:focus {
+    border-color: #FF00FF;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FF00FF;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: #8C008C; /* A darker, more intense purple */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 255, 0.5);
+}
+
+.message {
+    color: #FF5E5E;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: #FF00FF;
+}

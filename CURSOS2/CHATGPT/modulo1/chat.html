@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modulo 1 html</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+
+<body>
+    <header>
+        <a id="p2" href="../../../index.html"><img id="logo" src="../img/ChatGPT Image 1 ago 2025, 09_13_32.png"
+                alt=""></a>
+        <nav>
+            <a class="m2" href="../index.html">Atras</a>
+        </nav>
+    </header>
+    <section class="video-section">
+        <div class="video-wrapper">
+            <video id="powerpoint-video" class="responsive-video" controls>
+                <source src="chatgpt_explicacion.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
+        <div class="video-info-box">
+            <h2 class="video-title">¡Aprende Canva forma divertida!</h2>
+            <p class="video-description">
+                Este video es una introducción a los conceptos basicos de canva
+            </p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fa-solid fa-robot"></i>
+                <h1>ChatGPT Trivia</h1>
+            </div>
+            <div class="score">Puntuación: <span id="score">0</span></div>
+        </div>
+
+        <div class="game-container">
+            <div id="start-screen" class="screen active">
+                <div class="welcome-card">
+                    <h2>Bienvenido al ChatGPT Trivia Challenge</h2>
+                    <p>Pon a prueba tus conocimientos sobre la inteligencia artificial que está revolucionando el mundo.
+                    </p>
+                    <div class="ai-image">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <button id="start-btn" class="btn-primary">Comenzar Juego</button>
+                </div>
+            </div>
+
+            <div id="game-screen" class="screen">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="question-count">Pregunta <span id="current">1</span> de <span id="total">10</span></div>
+
+                <div class="question-card">
+                    <h2 id="question"></h2>
+                    <div class="options-container">
+                        <div class="option" data-index="0">
+                            <span class="option-letter">A</span>
+                            <p class="option-text"></p>
+                        </div>
+                        <div class="option" data-index="1">
+                            <span class="option-letter">B</span>
+                            <p class="option-text"></p>
+                        </div>
+                        <div class="option" data-index="2">
+                            <span class="option-letter">C</span>
+                            <p class="option-text"></p>
+                        </div>
+                        <div class="option" data-index="3">
+                            <span class="option-letter">D</span>
+                            <p class="option-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="next-btn" class="btn-primary" disabled>Siguiente</button>
+            </div>
+
+            <div id="end-screen" class="screen">
+                <div class="result-card">
+                    <h2>¡Juego Terminado!</h2>
+                    <div class="result-score">
+                        <p>Tu puntuación final:</p>
+                        <div class="final-score"><span id="final-score">0</span>/10</div>
+                    </div>
+                    <div class="result-message" id="result-message"></div>
+                    <button id="restart-btn" class="btn-primary">Jugar de Nuevo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+</body>
+<script src="chat.js"></script>
+
+</html>

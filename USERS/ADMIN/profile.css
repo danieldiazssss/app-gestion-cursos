@@ -1,0 +1,161 @@
+/* ============================================
+   ESTILOS ESPECÍFICOS PARA PERFIL DE ADMIN
+   ============================================ */
+
+/* Badge con gradiente */
+.badge.bg-gradient {
+    background: linear-gradient(135deg,
+        #0b7e15 0%,
+        #1fa233 20%,
+        #9c27b0 35%,
+        #ba68c8 50%,
+        #ffb74d 70%,
+        #ff8f00 85%,
+        #e65100 100%);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Notificaciones en tiempo real */
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff4757;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Botones de acción rápida */
+.quick-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.action-btn:hover {
+    background: rgba(138, 43, 226, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Tarjetas de configuración */
+.config-card {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #00bcd4;
+}
+
+.config-card h4 {
+    color: #00bcd4;
+    margin-bottom: 15px;
+}
+
+/* Switch personalizado */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background: var(--morado);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Tooltips */
+.tooltip-info {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: help;
+}
+
+.tooltip-info:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 100;
+    margin-bottom: 5px;
+}
+
+/* Responsive para perfil */
+@media (max-width: 576px) {
+    .profile-pic-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .admin-title {
+        font-size: 1.8rem;
+    }
+    
+    .stat-value {
+        font-size: 2rem;
+    }
+}

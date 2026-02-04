@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "pixel";
+    src: url(../FUENTES/AVENGEANCE\ HEROIC\ AVENGER.ttf);
+}
+
+@font-face {
+    font-family: "texto";
+    src: url(FUENTES/Coolvetica\ Rg.otf);
+}
+
+@font-face {
+    font-family: "titulooffice";
+    src: url(FUENTES/AVENGEANCE\ HEROIC\ AVENGER.ttf);
+}
+
+@font-face {
+    font-family: "tarjetas";
+    src: url(FUENTES/kindergarten.ttf);
+}
+
+@font-face {
+    font-family: "decoracion1";
+    src: url(FUENTES/Crushed\ Candy.otf);
+}
+
+@font-face {
+    font-family: "decoracion2";
+    src: url(FUENTES/JugendstilOrnamente.ttf);
+}
+
+@font-face {
+    font-family: "decoracion3";
+    src: url(FUENTES/ARTESANIA\ display.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-neon: #00ffff;
+    --accent-neon: #ff00ff;
+    --dark-bg: #101015;
+    --card-bg: rgba(20, 20, 25, 0.8);
+    --text-primary: #e0e0e0;
+    --text-secondary: #888;
+}
+
+body {
+    background-image: url(auto-en-carretera-con-el-cielo-nocturno-arte-digital_3840x2160_xtrafondos.com.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: 'Exo 2', sans-serif;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* El header ahora es más simple */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    position: sticky; /* Fijo arriba al hacer scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+#logo {
+    width: 120px; /* Logo un poco más pequeño */
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+.m2 {
+    text-decoration: none;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.m2:hover {
+    color: var(--primary-neon);
+    transform: translateY(-2px);
+}
+
+/* El contenedor del juego es el centro de atención */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 80px); /* Menos el alto del header */
+    padding: 50px 20px 20px;
+    gap: 3rem;
+}
+
+.game-board {
+    position: relative;
+}
+
+#tetris-canvas {
+    background: var(--card-bg);
+    border: 2px solid var(--primary-neon);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    transition: box-shadow 0.3s;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 300px;
+}
+
+.title-section h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: 4rem; /* Un poco más pequeño */
+    font-weight: 900;
+    color: var(--primary-neon);
+    text-shadow: 0 0 10px var(--primary-neon);
+}
+
+.stats-panel,
+.next-piece-panel,
+.control-panel,
+.instructions,
+.objective {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: border 0.3s;
+}
+
+.stats-panel:hover,
+.next-piece-panel:hover,
+.control-panel:hover,
+.instructions:hover,
+.objective:hover {
+    border: 1px solid var(--primary-neon);
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    font-size: 1.2rem; /* Tamaño de fuente más estándar */
+}
+
+.stat-label {
+    color: var(--text-secondary);
+}
+
+.stat-value {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    color: var(--primary-neon);
+}
+
+.next-piece-panel h3 {
+    color: var(--accent-neon);
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', monospace;
+}
+
+#next-piece-canvas {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--accent-neon);
+    border-radius: 5px;
+}
+
+#start-button {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    background: var(--primary-neon);
+    border: none;
+    border-radius: 5px;
+    color: var(--dark-bg);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#start-button:hover {
+    background: var(--accent-neon);
+    transform: translateY(-2px);
+}
+
+.instructions h3, .objective h3 {
+    color: var(--primary-neon);
+    margin-bottom: 0.8rem;
+    font-family: 'Orbitron', monospace;
+}
+
+.control-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-left: 2px solid var(--accent-neon);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.key {
+    font-family: 'Orbitron', monospace;
+    color: var(--accent-neon);
+    font-weight: 700;
+}
+
+.game-over-overlay {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.game-over-content {
+    background: var(--card-bg);
+    border: 2px solid var(--accent-neon);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.game-over-content h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    color: var(--accent-neon);
+    margin-bottom: 0.5rem;
+}
+
+.game-over-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#restart-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    background: var(--primary-neon);
+    color: var(--dark-bg);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .game-info {
+        width: 100%;
+    }
+}
+header {
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: rgba(88, 167, 203, 0.237);
+    backdrop-filter: blur(5px);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo {
+    width: 150px;
+
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+
+.m2 {
+    text-decoration: none;
+    font-family: 'pixel', sans-serif;
+    font-size: 3rem;
+
+   
+    transition: background 0.3s, transform 0.3s;
+
+   background: linear-gradient(135deg,
+            rgb(209, 75, 216) 0%,
+            rgb(32, 139, 201)20%,
+            rgb(32, 139, 201) 35%,
+            rgb(209, 75, 216) 50%,
+            rgb(32, 139, 201) 70%,
+            rgb(209, 75, 216) 85%,
+            rgb(32, 139, 201)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.m2:hover {
+    transform: scale(1.1);
+   
+}
+.game-container {
+    display: grid;
+    grid-template-columns: 1fr 300px 250px; /* IZQ | CENTRO | DER */
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    align-items: start;
+}
+
+/* Ajustar tamaños */
+.game-board {
+    display: flex;
+    justify-content: center;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.game-extra {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Evitar que se vea desordenado en pantallas pequeñas */
+@media (max-width: 900px) {
+    .game-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .game-extra, .game-info {
+        width: 100%;
+    }
+}

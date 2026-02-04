@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "pixel";
+  src: url(/FUENTES/AVENGEANCE\ HEROIC\ AVENGER.ttf);
+}
+
+@font-face {
+  font-family: "texto";
+  src: url(FUENTES/Coolvetica\ Rg.otf);
+}
+
+@font-face {
+  font-family: "titulooffice";
+  src: url(FUENTES/AVENGEANCE\ HEROIC\ AVENGER.ttf);
+}
+
+@font-face {
+  font-family: "tarjetas";
+  src: url(/FUENTES/kindergarten.ttf);
+}
+
+@font-face {
+  font-family: "decoracion1";
+  src: url(FUENTES/Crushed\ Candy.otf);
+}
+
+@font-face {
+  font-family: "decoracion2";
+  src: url(FUENTES/JugendstilOrnamente.ttf);
+}
+
+@font-face {
+  font-family: "decoracion3";
+  src: url(/FUENTES/ARTESANIA\ display.otf);
+}
+
+header {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0px 0px;
+  padding: 15px;
+}
+
+nav {
+  margin-top: 2%;
+  margin-right: 1%;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  gap: 15px;
+}
+
+#p1 {
+  width: 5%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.m2 {
+  text-decoration: none;
+  color: aliceblue;
+  transition: 0.9;
+  font-family: "pixel";
+  font-size: 25px;
+  height: 25%;
+  margin-top: 5%;
+}
+
+#logo {
+  width: 18%;
+}
+
+.m2:hover {
+  background: linear-gradient(
+    135deg,
+    rgb(128, 103, 47) 0%,
+    rgb(128, 103, 47) 20%,
+    rgb(128, 103, 47)  50%,
+    rgb(72, 73, 73) 70%,
+    rgb(72, 73, 73) 85%,
+    rgb(72, 73, 73) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fondoexcel {
+  background-image: url(1316804.jpeg);
+  display: flex;
+  flex-direction: row;
+  background-size: cover;
+  height: 60vh;
+}
+
+#excelito1 {
+  width: 40%;
+  margin-left: 50%;
+  margin-top: 6%;
+}
+
+.excelito {
+  margin-left: 7%;
+  margin-top: 5%;
+}
+
+#t3 {
+  color: rgb(128, 103, 47);
+  font-family: "decoracion3";
+  font-size: 55px;
+}
+
+#t4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: aliceblue;
+}
+
+ul {
+  color: aliceblue;
+  margin-top: 5%;
+  margin-left: 2%;
+  font-size: 25px;
+}
+
+.btn6 {
+  margin-top: 2%;
+  border: none;
+  background-color: rgb(92, 79, 15);
+  border-radius: 5px;
+  padding: 0%;
+  width: 20%;
+  height: 4vh;
+  color: aliceblue;
+  font-family: "decoracion3";
+  font-size: 20px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: black;
+  height: 4.9vh;
+  color: aliceblue;
+  padding-top: 6%;
+  font-size: 25px;
+}
+
+#fote2 {
+  padding-top: 1%;
+  margin-left: 1%;
+  font-size: 15px;
+}

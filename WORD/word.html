@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="archivo-documento-word-9995636-8082017.webp" />
+    <title>CURSO WORD</title>
+    <link rel="stylesheet" href="./word.css">
+</head>
+
+<body>
+    <header>
+        <a id="p1" href="../index.html"><img id="logo" src="../IMG/LOGIN.png" alt=""></a>
+        <nav>
+            <a class="m1" href="../index.html#introduccion">Inicio</a>
+        </nav>
+    </header>
+    <main>
+        <section class="fondoword">
+            <div class="container">
+                <div class="wordsito">
+                    <h1 id="t1">CURSO WORD</h1>
+                    <p id="t2">Aprende a utilizar Microsoft Word desde cero. Este curso te enseñará las herramientas
+                        básicas y avanzadas para crear documentos profesionales.</p>
+                    <div class="separar">
+                        <ul>
+                            <li><button class="btn5 module-btn" data-module="../WORD/modulo1/modulo1.html">
+                                <span id="inicia1">Introduccion a Word</span>
+                            </button></li>
+                            <li><button class="btn5 module-btn" data-module="../WORD/modulo1/modulo1.html">
+                                <span id="inicia1">Formato de texto</span>
+                            </button></li>
+                            <li><button class="btn5 module-btn" data-module="../WORD/modulo1/modulo1.html">
+                                <span id="inicia1">Tablas y gráficos</span>
+                            </button></li>
+                        </ul>
+                        <ul>
+                            <li><button class="btn5 module-btn" data-module="../WORD/modulo1/modulo1.html">
+                                <span id="inicia1">Revisión y corrección de documentos</span>
+                            </button></li>
+                            <li><button class="btn5 module-btn" data-module="../WORD/modulo1/modulo1.html">
+                                <span id="inicia1">Impresión y exportación</span>
+                            </button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="logoword">
+                    <img id="worsito1" src="../WORD/archivo-documento-word-9995636-8082017.webp" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p id="fote1">©2025 Slide Dash</p>
+    </footer>
+
+    <!-- Scripts de Firebase y autenticación -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBO4IGGTwcPCk10eormyOUaPh0gCaiOWSU",
+            authDomain: "slide-dash.firebaseapp.com",
+            projectId: "slide-dash",
+            storageBucket: "slide-dash.firebasestorage.app",
+            messagingSenderId: "438458321951",
+            appId: "1:438458321951:web:3ee01acc0ef06a57cdd92a",
+            measurementId: "G-9MH1414LF4"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Función para mostrar modal de login
+        function showLoginModal() {
+            let modal = document.getElementById('loginModal');
+            
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'loginModal';
+                modal.innerHTML = `
+                    <div class="modal-overlay">
+                        <div class="modal-content">
+                            <h2>🔒 Acceso Restringido</h2>
+                            <p>Para acceder a este módulo necesitas iniciar sesión</p>
+                            <div class="modal-buttons">
+                                <button id="goToLogin" class="btn-login">Iniciar Sesión</button>
+                                <button id="goToRegister" class="btn-register">Registrarse</button>
+                                <button id="closeModal" class="btn-close">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                
+                // Agregar estilos
+                addModalStyles();
+                
+                // Event listeners
+                document.getElementById('goToLogin').addEventListener('click', () => {
+                    window.location.href = '../USERS/AUTH/login.html';
+                });
+                
+                document.getElementById('goToRegister').addEventListener('click', () => {
+                    window.location.href = '../USERS/AUTH/register.html';
+                });
+                
+                document.getElementById('closeModal').addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+                
+                modal.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('modal-overlay')) {
+                        modal.style.display = 'none';
+                    }
+                });
+            }
+            
+            modal.style.display = 'flex';
+        }
+
+        // Función para agregar estilos
+        function addModalStyles() {
+            if (!document.getElementById('modal-styles')) {
+                const style = document.createElement('style');
+                style.id = 'modal-styles';
+                style.textContent = `
+                    #loginModal {
+                        display: none;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 9999;
+                    }
+                    
+                    .modal-overlay {
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        animation: fadeIn 0.3s ease;
+                    }
+                    
+                    .modal-content {
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        padding: 40px;
+                        border-radius: 20px;
+                        text-align: center;
+                        max-width: 500px;
+                        width: 90%;
+                        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                        animation: slideIn 0.3s ease;
+                    }
+                    
+                    .modal-content h2 {
+                        color: white;
+                        font-size: 28px;
+                        margin-bottom: 15px;
+                        font-weight: 600;
+                    }
+                    
+                    .modal-content p {
+                        color: rgba(255, 255, 255, 0.9);
+                        font-size: 16px;
+                        margin-bottom: 30px;
+                        line-height: 1.5;
+                    }
+                    
+                    .modal-buttons {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+                    }
+                    
+                    .modal-buttons button {
+                        padding: 14px 30px;
+                        border: none;
+                        border-radius: 10px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
+                    
+                    .btn-login {
+                        background-color: white;
+                        color: #667eea;
+                    }
+                    
+                    .btn-login:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+                    }
+                    
+                    .btn-register {
+                        background-color: #4CAF50;
+                        color: white;
+                    }
+                    
+                    .btn-register:hover {
+                        background-color: #45a049;
+                        transform: translateY(-2px);
+                        box-shadow: 0 5px 20px rgba(76, 175, 80, 0.3);
+                    }
+                    
+                    .btn-close {
+                        background-color: transparent;
+                        color: white;
+                        border: 2px solid white;
+                    }
+                    
+                    .btn-close:hover {
+                        background-color: rgba(255, 255, 255, 0.1);
+                    }
+                    
+                    @keyframes fadeIn {
+                        from { opacity: 0; }
+                        to { opacity: 1; }
+                    }
+                    
+                    @keyframes slideIn {
+                        from {
+                            transform: translateY(-50px);
+                            opacity: 0;
+                        }
+                        to {
+                            transform: translateY(0);
+                            opacity: 1;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+
+        // Agregar event listeners a todos los botones de módulos
+        document.addEventListener('DOMContentLoaded', () => {
+            const moduleButtons = document.querySelectorAll('.module-btn');
+            
+            moduleButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    const moduleUrl = button.getAttribute('data-module');
+                    
+                    // Verificar si el usuario está autenticado
+                    onAuthStateChanged(auth, (user) => {
+                        if (user) {
+                            // Usuario autenticado - permitir acceso
+                            console.log("✅ Usuario autenticado:", user.email);
+                            window.location.href = moduleUrl;
+                        } else {
+                            // Usuario no autenticado (invitado) - mostrar modal
+                            console.log("❌ Usuario invitado - Bloqueando acceso");
+                            showLoginModal();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <!-- Al final del módulo, antes de cerrar </body> -->
+<div style="text-align: center; margin: 40px 0;">
+    <div id="boton-completar-container"></div>
+</div>
+
+<script type="module">
+    import { crearBotonCompletarModulo } from '../progress-functions.js';
+    
+    // Cambiar estos valores según el curso y módulo
+    const CURSO_ID = 'word';  // word, excel, powerpoint, etc.
+    const MODULO_ID = 'modulo1';  // modulo1, modulo2, modulo3, etc.
+    const TOTAL_MODULOS = 5;  // Total de módulos del curso
+    
+    // Crear y mostrar el botón
+    const container = document.getElementById('boton-completar-container');
+    const boton = crearBotonCompletarModulo(CURSO_ID, MODULO_ID, TOTAL_MODULOS);
+    container.appendChild(boton);
+</script>
+</body>
+
+</html>

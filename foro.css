@@ -1,0 +1,276 @@
+/* CSS Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(foroimg/1272526.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+.file-input-wrapper input[type=file] {
+    position: absolute;
+    left: -9999px;
+}
+
+.file-input-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #f0f0f0;
+    border: 2px dashed #667eea;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.file-input-label:hover {
+    background: #e0e0e0;
+}
+
+.image-preview {
+    margin-top: 15px;
+    position: relative;
+}
+
+.image-preview img {
+    max-width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.remove-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+}
+
+.btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.post-info h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.post-meta {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.post-content {
+    margin: 15px 0;
+    color: #555;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    color: #666;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 🎨 CSS para Imagen Publicada */
+.post-image img {
+    max-height: 400px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+/* 💬 CSS para Respuestas/Comentarios */
+.comments-container {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.comment {
+    background: #f9f9f9;
+    border-left: 3px solid #667eea;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.comment-meta {
+    font-size: 0.8em;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.comment-text {
+    color: #444;
+    line-height: 1.4;
+}
+
+.comment-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.comment-form textarea {
+    min-height: 50px;
+    font-size: 0.9em;
+    padding: 8px;
+}
+
+.comment-form button {
+    background: #764ba2;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    margin-top: 5px;
+    width: 100%;
+}

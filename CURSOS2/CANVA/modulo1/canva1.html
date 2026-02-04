@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modulo 1</title>
+    <link rel="stylesheet" href="canva.css">
+</head>
+
+<body>
+    <header>
+        <a id="p2" href="../../index.html"><img id="logo" src="../IMG/ChatGPT Image 1 ago 2025, 08_52_00.png"
+                alt=""></a>
+        <nav>
+            <a class="m2" href="../index.html">Atras</a>
+        </nav>
+    </header>
+    <section class="video-section">
+        <div class="video-wrapper">
+            <video id="powerpoint-video" class="responsive-video" controls>
+                <source src="14 (1).mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+        </div>
+        <div class="video-info-box">
+            <h2 class="video-title">¡Aprende Canva forma divertida!</h2>
+            <p class="video-description">
+                Este video es una introducción a los conceptos basicos de canva
+            </p>
+        </div>
+    </section>
+    <div class="containerS">
+        <h1>Canvas Challenge</h1>
+        <p class="subtitle">Atrapa objetos y responde preguntas sobre Canvas</p>
+        
+        <div class="score-container">
+            <div class="score-box">
+                <div class="score-label">Puntuación</div>
+                <div class="score-value" id="score">0</div>
+            </div>
+            <div class="score-box">
+                <div class="score-label">Objetos Atrapados</div>
+                <div class="score-value" id="items">0</div>
+            </div>
+            <div class="score-box">
+                <div class="score-label">Vidas</div>
+                <div class="score-value" id="lives">3</div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas" width="600" height="500"></canvas>
+            
+            <div class="quiz-container">
+                <div class="question" id="question">¡Haz clic en Comenzar para iniciar!</div>
+                <div class="options" id="options"></div>
+                <div class="feedback" id="feedback"></div>
+                <div class="controls">
+                    <button id="startBtn">Comenzar</button>
+                    <button id="resetBtn">Reiniciar</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>Instrucciones:</h3>
+            <ul>
+                <li>Haz clic en "Comenzar" para iniciar el juego</li>
+                <li>Haz clic en los objetos que caen para responder preguntas sobre Canvas</li>
+                <li>Responde correctamente para ganar puntos</li>
+                <li>Si fallas una respuesta, pierdes una vida</li>
+                <li>¡Pierdes cuando te quedas sin vidas!</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script src="canva.js"></script>
+
+</html>

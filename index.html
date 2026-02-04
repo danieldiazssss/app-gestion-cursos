@@ -1,0 +1,315 @@
+<!-- Este contenido es solo de ejemplo, usa tu dashboard.html actual --><!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Dash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="IMG/L1asd.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="mainContent" class="content-hidden">
+        <header id="nosex1" class="fixed-top">
+            <a id="s1" href="index.html">
+                <img id="logo" src="IMG/LOGO.png" alt="Slide Dash Logo" loading="eager">
+            </a>
+            <nav>
+                <a class="a1" href="#dec1">Cursos</a>
+                
+
+                <!-- Links para usuarios NO autenticados -->
+                <div id="auth-links" class="nose23">
+                    <a class="a1" href="./USERS/AUTH/login.html">Iniciar Sesión</a>
+                    <a class="a1" href="./USERS/AUTH/register.html">Registrarse</a>
+                </div>
+
+                <!-- Links para usuarios autenticados -->
+                <div id="profile-links">
+                    
+                    <a class="a1" id="admin-dashboard-link" href="./USERS/ADMIN/dashboard.html">Dashboard </a>
+                   
+                    <button class="a1" id="logout-btn">Cerrar Sesión</button>
+                     <a class="a1" id="user-profile-link" href="#">Mi Perfil</a>
+                </div>
+            </nav>
+        </header>
+
+        <div id="top-of-page"></div>
+
+        <main>
+            <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <video class="d-block w-100" autoplay muted loop preload="metadata" loading="lazy">
+                            <source src="VIDEOS/abstract-planet-ring-moewalls-com.mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1 id="int1"><span id="int2">SLIDE</span><span id="int3">DASH</span></h1>
+                            <p id="descripcion">Somos una plataforma educativa sin fines de lucro, e innovadora
+                                dedicada
+                                al aprendizaje y formación de jóvenes aprendices, en herramientas básicas pero
+                                esenciales.</p>
+                            <p id="descripcion">Ofreciendo cursos totalmente gratuitos y didácticos que combinan
+                                aprendizaje visual, práctico y divertido.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <video class="d-block w-100" autoplay muted loop preload="none" loading="lazy">
+                            <source src="VIDEOS/cyberpunk-2077-judys-apartment-moewalls-com.mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="carousel-caption d-none d-md-block" id="segundi">
+                            <h1 id="int1"><span id="int6">CURSOS</span><span id="int7">SLIDE</span></h1>
+                            <p id="descripcion">Nuestra plataforma interactiva te ofrece cursos gratuitos y
+                                didácticos
+                                para aprender lo basico y intermedio herramientas esenciales como Word, Excel,
+                                PowerPoint, y Canva.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="todooooo">
+                <div class="decoracion1">
+                    <p id="dec1">ABCDEFGHIJLKMNÑOPQRSTUVXYZ</p>
+                </div>
+
+                <div class="todoover">
+                    <div class="office">
+                        <h1 id="t1"><span id="sp1">O</span><span id="sp2">F</span><span id="sp3">F</span><span
+                                id="sp4">I</span><span id="sp5">C</span><span id="sp6">E</span></h1>
+                        <p id="t2">Descubre nuestra guia de cursos gratuitos en línea diseñados para llevar tus
+                            habilidades ofimáticas al siguiente nivel.</p>
+                    </div>
+                    <div class="fondoimg">
+                        <img id="los1" src="IMG/iconoswox.png" alt="Office Suite" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="cartas">
+                    <a class="cars1" href="WORD/word.html">
+                        <section class="word">
+                            <img class="word1" src="WORD/archivo-documento-word-9995636-8082017.webp"
+                                alt="Word Icon" loading="lazy">
+                            <h3 id="cardt1">Word</h3>
+                            <p id="text1">Transforma tus ideas en documentos profesionales. Desde cartas hasta
+                                informes
+                                complejos, Word te da las herramientas para escribir, editar y formatear textos con
+                                estilo profesional.</p>
+                        </section>
+                    </a>
+                    <a class="cars1" href="EXCEL/excel.html">
+                        <section class="excel">
+                            <img class="word2" src="EXCEL/archivo-xlsx-7931960-6294884.webp" alt="Excel Icon"
+                                loading="lazy">
+                            <h3 id="cardt2">Excel</h3>
+                            <p id="text2">Convierte números en decisiones inteligentes. Organiza datos, crea
+                                gráficos
+                                impactantes y automatiza cálculos para resolver problemas del mundo real con hojas
+                                de
+                                cálculo poderosas.</p>
+                        </section>
+                    </a>
+                    <a class="cars1" href="POWERP/powerp.html">
+                        <section class="powerp">
+                            <img class="word3" src="POWERP/asimismo.png" alt="PowerPoint Icon" loading="lazy">
+                            <h3 id="cardt3">Power Point</h3>
+                            <p id="text3">Comunica con impacto visual. Diseña presentaciones que cautiven a tu
+                                audiencia
+                                con animaciones, transiciones y elementos multimedia que hacen memorable tu mensaje.
+                            </p>
+                        </section>
+                    </a>
+                    <a class="cars1" href="OUTLOOK/outlook.html">
+                        <section class="outlook">
+                            <img src="OUTLOOK/outok.png" alt="Outlook Icon" class="word4" loading="lazy">
+                            <h3 id="cardt4">Outlook</h3>
+                            <p id="text4">Tu centro de comunicación profesional. Gestiona correos, calendario y
+                                contactos en un solo lugar para mantenerte organizado y conectado con tu equipo.</p>
+                        </section>
+                    </a>
+                    <a class="cars1" href="ACCES/acces.html">
+                        <section class="acces">
+                            <img src="ACCES/pngegg.png" alt="Access Icon" class="word5" loading="lazy">
+                            <h3 id="cardt5">Publisher</h3>
+                            <p id="text5">Diseña y comunica con impacto. Crea folletos, revistas y catálogos
+                                personalizados para presentar tus ideas de forma atractiva y profesional.</p>
+                        </section>
+                    </a>
+                </div>
+
+                <div class="todoover">
+                    <div class="office">
+                        <h1 id="t1"><span id="sp1">H</span><span id="sp2">E</span><span id="sp3">R</span><span
+                                id="sp4">R</span><span id="sp5">A</span><span id="sp6">M</span><span
+                                id="sp6">I</span><span id="sp6">E</span><span id="sp6">N</span><span
+                                id="sp6">T</span><span id="sp6">A</span><span id="sp6">S</span> WEB</h1>
+                        <p id="t2">Guiate con nuestros cursos, para entender el maneja y funciones de estas, aprende
+                            a
+                            utilizarlas para
+                            tus estudios, proyectos creativos y comunicación online.</p>
+                    </div>
+                    <div class="fondoimg">
+                        <img id="los1" src="IMG/NOSE.png" alt="Web Tools" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="cartas" style="margin-top: 5%;">
+                    <a class="cars1" href="CURSOS2/GMAIL/index.html">
+                        <section class="gmail">
+                            <img src="CURSOS2/GMAIL/IMG/gmailfinal.png" alt="Gmail Icon" class="word1"
+                                loading="lazy">
+                            <h3 id="cardt6">Gmail</h3>
+                            <p id="text6">Crea y gestiona correos electrónicos de forma profesional. Aprende a usar
+                                etiquetas, filtros y funciones clave para organizar tu bandeja de entrada.</p>
+                        </section>
+                    </a>
+                    <a class="cars1" href="CURSOS2/CANVA/index.html">
+                        <section class="canva">
+                            <img src="CURSOS2/CANVA/canva.png" alt="Canva Icon" class="word2" loading="lazy">
+                            <h3 id="cardt7">Canva</h3>
+                            <p id="text7">Diseña como un experto sin saber de diseño. Crea presentaciones, posters,
+                                infografías y más con plantillas visuales fáciles de editar.</p>
+                        </section>
+                    </a>
+                    <a class="cars1" href="CURSOS2/CHATGPT/index.html">
+                        <section class="chatgpt">
+                            <img src="CURSOS2/CHATGPT/sisisis.png" id="chat" alt="ChatGPT Icon" class="word3"
+                                loading="lazy">
+                            <h3 id="cardt8">ChatGPT</h3>
+                            <p id="text8">Descubre cómo apoyarte en la inteligencia artificial para estudiar,
+                                generar
+                                ideas, escribir textos o aprender nuevas cosas.</p>
+                        </section>
+                    </a>
+                    <a class="cars1" href="CURSOS2/GOOGLEMEET/index.html">
+                        <section class="meet">
+                            <img src="CURSOS2/GOOGLEMEET/IMG/iconomeet.png" alt="Google Meet Icon" class="word4"
+                                loading="lazy">
+                            <h3 id="cardt9">Google Meet</h3>
+                            <p id="text9">Aprende a crear videollamadas, compartir pantalla y usar Google Meet para
+                                clases, entrevistas o reuniones online.</p>
+                        </section>
+                    </a>
+
+                    <a class="cars1" href="CURSOS2/DRIVE/index.html">
+                        <section class="drive">
+                            <img src="CURSOS2/DRIVE/drivenose.png" alt="Google Drive Icon" class="word1"
+                                loading="lazy">
+                            <h3 id="cardt11">Google Drive</h3>
+                            <p id="text11">Almacena archivos en la nube, comparte documentos y colabora en tiempo
+                                real
+                                desde cualquier dispositivo con Drive.</p>
+                        </section>
+                    </a>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            
+            <section id="juegos-section">
+                <h2 class="section-title">Juegos Interactivos</h2>
+                <div class="cards-container">
+                    <a href="JUEGO1/index.html" class="game-card">
+                        <div class="card-content">
+                            <h3 class="card-title">El Ahorcado</h3>
+                            <p class="card-description">Adivina la palabra de programacion y salvate</p>
+                        </div>
+                    </a>
+                    <a href="JUEGO2/index.html" class="game-card">
+                        <div class="card-content">
+                            <h3 class="card-title">Tetris</h3>
+                            <p class="card-description">Demuestra tus reflejos. Despeja líneas para la mayor
+                                puntuación. El reto está activado.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+            <br><br><br><br><br><br><br><br>
+            
+            <section id="comentarios">
+                <h2 id="lx1">Comentarios sobre nuestra plataforma de cursos</h2>
+                <form id="formComentario">
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                    <textarea id="mensaje" placeholder="Escribe tu comentario aquí..." required></textarea>
+                    <button type="submit">Publicar</button>
+                </form>
+                <div id="listaComentarios"></div>
+            </section>
+
+            <a id="boton1" href="#top-of-page">
+                <button type="button" aria-label="Ir arriba">↑</button>
+            </a>
+        </main>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1CP11fSJpS/" target="_blank" class="social-item">
+                    <i class="fab fa-facebook"></i>
+                    <span>@slidedash_x</span>
+                </a>
+                <a href="https://www.instagram.com/slidedash_x?igsh=bWx3eTkzcW8wZG54" target="_blank"
+                    class="social-item">
+                    <i class="fab fa-instagram"></i>
+                    <span>@slidedash_x</span>
+                </a>
+                <a href="https://x.com/slidedash_x?t=Sc8YK2w0zp6WHE0OBtVslQ&s=09" target="_blank"
+                    class="social-item">
+                    <i class="fab fa-x-twitter"></i>
+                    <span>@slidedash_x</span>
+                </a>
+                <a href="https://www.youtube.com/@slidedash_x" target="_blank" class="social-item">
+                    <i class="fab fa-youtube"></i>
+                    <span>@slidedash_x</span>
+                </a>
+                <a href="mailto:slidedashx@gmail.com" target="_blank" class="social-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>slidedashx@gmail.com</span>
+                </a>
+                <a href="https://www.tiktok.com/@slidedash_x?_t=ZS-8z3ImWpuNso&_r=1" target="_blank"
+                    class="social-item">
+                    <i class="fab fa-tiktok"></i>
+                    <span>@slidedash_x</span>
+                </a>
+            </div>
+            <p>© 2025 Slide Dash - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script src="logica.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

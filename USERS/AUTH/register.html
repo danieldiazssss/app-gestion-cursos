@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/IMG/LOGO.png" type="image/x-icon">
+    <title>REGISTRO - SLIDE DASH</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="register-container">
+        <h2 class="register-title">REGISTRARSE</h2>
+
+        <form id="registerForm">
+            <label for="name">Nombre Completo</label>
+            <input type="text" class="form-control" id="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" required>
+
+            <label for="ficha">Número de Ficha</label>
+            <input type="text" class="form-control" id="ficha" required>
+
+            <label for="formacion">Formación</label>
+            <input type="text" class="form-control" id="formacion" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control" id="password" required>
+
+            <label for="confirmPassword">Confirmar Contraseña</label>
+            <input type="password" class="form-control" id="confirmPassword" required>
+
+            <div class="terms-box">
+                <input type="checkbox" id="terms" required>
+                <label for="terms" class="terms-label">
+                    Acepto los <a href="terminos.html" target="_blank">Términos y Condiciones</a>
+                    y la <a href="privacidad.html" target="_blank">Política de Privacidad</a>.
+                </label>
+            </div>
+
+            <button type="submit" class="btn-register">
+                <i class="fas fa-user-plus"></i> REGISTRARSE
+
+
+            </button>
+
+            <p class="message" id="message"></p>
+        </form>
+
+        <div class="links">
+            ¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js"></script>
+
+    <script src="auth.js" type="module"></script>
+
+</body>
+
+</html>

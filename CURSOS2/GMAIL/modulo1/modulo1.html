@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1: Introducción a Gmail</title>
+    <link rel="stylesheet" href="modulo1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap">
+</head>
+
+<body>
+    <header>
+        <a id="p2" href="../../../index.html"><img id="logo" src="../../../CURSOS2/GMAIL/IMG/ChatGPT Image 1 ago 2025, 08_32_01.png" alt=""></a>
+        <nav>
+            <a class="m2" href="../index.html">Atras</a>
+            
+        </nav>
+    </header>
+
+    <div class="video-section">
+        <div class="video-header">
+            <h1 class="video-title">Módulo 1: Introducción a Gmail</h1>
+            <p class="video-subtitle">Mira este video para aprender los conceptos básicos y poder resolver el desafío.
+            </p>
+        </div>
+
+        <div class="video-wrapper">
+            <video controls poster="https://via.placeholder.com/800x450/1a73e8/ffffff?text=Video+Introductorio+Gmail">
+                <source src="../video_gmail.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="score-panel">
+            <div>🏆 Puntos: <span id="score">0</span></div>
+            <div class="level-indicator">Nivel: <span id="level">Principiante</span></div>
+            <div>📧 Juego: <span id="current-game">Quiz Gmail</span></div>
+        </div>
+
+        <div class="game-nav">
+            <button class="nav-btn active" onclick="switchGame('quiz')">🧠 Quiz Gmail</button>
+            <button class="nav-btn" onclick="switchGame('inbox')">📩 Simulador de Bandeja</button>
+            <button class="nav-btn" onclick="switchGame('drag')">🔧 Ordena la Interfaz</button>
+        </div>
+
+        <div class="game-area">
+
+            <div id="quiz-game" class="game-section">
+                <div class="quiz-question" id="quiz-question">
+                    ¡Preparado para el desafío Gmail!
+                </div>
+                <div class="quiz-options" id="quiz-options"></div>
+                <button class="next-btn" onclick="nextQuestion()" id="next-question" style="display: none;">
+                    Siguiente ➡️
+                </button>
+            </div>
+
+            <div id="inbox-game" class="game-section game-hidden">
+                <h2>📥 Organiza tu Bandeja</h2>
+                <p>Arrastra cada correo a la acción correcta:</p>
+
+                <div class="inbox-container">
+                    <div class="emails-column">
+                        <div class="email" draggable="true" data-action="archive">
+                            <strong>Oferta Black Friday</strong> - 50% descuento
+                        </div>
+                        <div class="email" draggable="true" data-action="delete">
+                            <strong>Spam: Gana un iPhone</strong> - ¡Participa ahora!
+                        </div>
+                        <div class="email" draggable="true" data-action="label">
+                            <strong>Reunión equipo</strong> - Adjunto: Presentación
+                        </div>
+                    </div>
+
+                    <div class="actions-column">
+                        <div class="action" data-action="archive"> Archivar</div>
+                        <div class="action" data-action="delete"> Eliminar</div>
+                        <div class="action" data-action="label"> Etiquetar</div>
+                    </div>
+                </div>
+
+                <button class="check-btn" onclick="checkInboxGame()"> Verificar</button>
+            </div>
+
+            <div id="drag-game" class="game-section game-hidden">
+                <h2>🧩 Completa la Interfaz de Gmail</h2>
+                <p>Arrastra los elementos faltantes:</p>
+
+                <div class="gmail-interface">
+                    <img src="gmail-screenshot.png" alt="Interfaz Gmail" class="gmail-img">
+                    <div class="dropzone" data-element="search"></div>
+                    <div class="dropzone" data-element="compose"></div>
+                </div>
+
+                <div class="draggable-elements">
+                    <div class="element" draggable="true" data-element="search"> Barra de búsqueda</div>
+                    <div class="element" draggable="true" data-element="compose"> Redactar</div>
+                </div>
+
+                <button class="check-btn" onclick="checkDragGame()"> Verificar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="modulo1.js"></script>
+
+</html>

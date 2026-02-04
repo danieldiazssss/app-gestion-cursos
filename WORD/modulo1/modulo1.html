@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 1 - Word</title>
+    <link rel="shortcut icon" href="../archivo-documento-word-9995636-8082017.webp" type="image/x-icon">
+    <link rel="stylesheet" href="modulo1.css">
+</head>
+
+<body>
+    <header>
+        <a id="p2" href="../../index.html"><img id="logo" src="../../IMG/LOGIN.png" alt=""></a>
+        <nav>
+            <a class="m2" href="../word.html">Atras</a>
+        </nav>
+    </header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="contenedor-modulo">
+
+        <h1 class="titulo-modulo">INTRODUCCION A WORD</h1>
+        <div class="video-container">
+            <div class="video-header">
+                <h1 class="video-title">Video Destacado</h1>
+                <p class="video-subtitle">Disfruta de contenido de alta calidad</p>
+            </div>
+
+            <div class="video-wrapper">
+                <video id="myVideo" controls
+                    poster="https://via.placeholder.com/800x450/667eea/ffffff?text=Video+Preview">
+                    <source src="introduccion word2.mp4" type="video/mp4">
+
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+                <div class="video-overlay">
+                    <button class="play-button" onclick="togglePlay()"></button>
+                </div>
+            </div>
+
+            <div class="video-controls">
+                <button class="control-btn" onclick="toggleFullscreen()">Pantalla Completa</button>
+                <button class="control-btn" onclick="toggleMute()">Silenciar</button>
+                <button class="control-btn" onclick="changeSpeed()">Velocidad</button>
+            </div>
+
+
+        </div>
+        <div class="game-container">
+
+            <div class="score-panel">
+                <div>🏆 Puntos: <span id="score">0</span></div>
+                <div class="level-indicator">Nivel: <span id="level">Principiante</span></div>
+                <div> Juego: <span id="current-game">Quiz</span></div>
+            </div>
+
+
+            <div class="game-nav">
+                <button class="nav-btn active" onclick="switchGame('quiz')"> Quiz Rápido</button>
+                <button class="nav-btn" onclick="switchGame('memory')"> Memoria Tools</button>
+                <button class="nav-btn" onclick="switchGame('simulator')"> Simulador Word</button>
+                <button class="nav-btn" onclick="switchGame('drag')"> Arrastrar y Soltar</button>
+            </div>
+
+
+            <div class="game-area">
+
+                <div id="quiz-game" class="game-section">
+                    <div class="quiz-question" id="quiz-question">
+                        ¡Cargando pregunta...!
+                    </div>
+                    <div class="quiz-options" id="quiz-options">
+
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="nextQuestion()" id="next-question" style="display: none;">
+                            Siguiente Pregunta
+                        </button>
+                    </div>
+                </div>
+
+
+                <div id="memory-game" class="game-section game-hidden">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <h2 style="color: #00d4ff;">Encuentra las parejas de herramientas de Word</h2>
+                        <p style="font-size: 18px;">Encuentra las parejas de herramientas. ¡Memoriza su ubicación!</p>
+                        <div>⏱️ Tiempo: <span id="memory-time">0</span>s | Intentos: <span id="memory-attempts">0</span>
+                        </div>
+                    </div>
+                    <div class="memory-grid" id="memory-grid">
+
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="resetMemoryGame()"> Nuevo Juego</button>
+                    </div>
+                </div>
+
+
+                <div id="simulator-game" class="game-section game-hidden">
+                    <div style="margin-bottom: 20px;">
+                        <h2 style="color: #00d4ff; text-align: center;">💻 Simulador de Microsoft Word</h2>
+                        <p style="text-align: center; font-size: 18px;">¡Usa las herramientas como en Word real!</p>
+                    </div>
+
+                    <div class="word-simulator">
+                        <div class="word-ribbon">
+                            <div class="ribbon-tool" onclick="formatText('bold')" title="Negrita">
+                                <strong>B</strong>
+                            </div>
+                            <div class="ribbon-tool" onclick="formatText('italic')" title="Cursiva">
+                                <em>I</em>
+                            </div>
+                            <div class="ribbon-tool" onclick="formatText('underline')" title="Subrayado">
+                                <u>U</u>
+                            </div>
+                            <div class="ribbon-tool" onclick="changeTextColor('red')" style="color: red;"
+                                title="Color Rojo">
+                                A
+                            </div>
+                            <div class="ribbon-tool" onclick="changeTextColor('blue')" style="color: blue;"
+                                title="Color Azul">
+                                A
+                            </div>
+                            <div class="ribbon-tool" onclick="increaseFontSize()" title="Aumentar tamaño">
+                                A+
+                            </div>
+                            <div class="ribbon-tool" onclick="decreaseFontSize()" title="Reducir tamaño">
+                                A-
+                            </div>
+                            <div class="ribbon-tool" onclick="alignText('left')" title="Alinear izquierda">
+                                ←
+                            </div>
+                            <div class="ribbon-tool" onclick="alignText('center')" title="Centrar">
+                                ↔
+                            </div>
+                            <div class="ribbon-tool" onclick="alignText('right')" title="Alinear derecha">
+                                →
+                            </div>
+                            <div class="ribbon-tool" onclick="clearFormatting()" title="Limpiar formato">
+                                ❌
+                            </div>
+                        </div>
+
+                        <div class="document-area">
+                            <div class="editable-content" id="document-content" contenteditable="true">
+                                ¡Bienvenido al simulador de Word!
+
+                                Prueba estas acciones:
+                                1. Selecciona texto y hazlo NEGRITA
+                                2. Cambia el COLOR del texto
+                                3. Prueba la CURSIVA y el SUBRAYADO
+                                4. Alinea el texto al CENTRO
+                                5. Aumenta el TAMAÑO de letra
+
+                                ¡Experimenta con todas las herramientas! Cada acción te dará puntos extra.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="saveDocument()"> Guardar Documento</button>
+                        <button class="nav-btn" onclick="resetDocument()"> Nuevo Documento</button>
+                    </div>
+                </div>
+
+
+                <div id="drag-game" class="game-section game-hidden">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h2 style="color: #00d4ff;"> Arrastra las herramientas a su lugar correcto</h2>
+                        <p style="font-size: 18px;">Identifica dónde pertenece cada herramienta en Word</p>
+                    </div>
+
+                    <div class="drag-container">
+                        <div class="tools-bank">
+                            <h3 style="color: #00d4ff; text-align: center; margin-bottom: 20px;"> Herramientas
+                                Disponibles</h3>
+                            <div class="drag-tool" draggable="true" data-category="formato"> Negrita</div>
+                            <div class="drag-tool" draggable="true" data-category="formato"> Cursiva</div>
+                            <div class="drag-tool" draggable="true" data-category="formato"> Subrayado</div>
+                            <div class="drag-tool" draggable="true" data-category="archivo"> Guardar</div>
+                            <div class="drag-tool" draggable="true" data-category="archivo"> Abrir</div>
+                            <div class="drag-tool" draggable="true" data-category="diseño"> Alinear</div>
+                            <div class="drag-tool" draggable="true" data-category="diseño"> Tabla</div>
+                            <div class="drag-tool" draggable="true" data-category="insertar">Imagen</div>
+                        </div>
+
+                        <div class="word-interface">
+                            <h3 style="text-align: center; margin-bottom: 20px;">🖥️ Categorías de Word</h3>
+                            <div class="drop-zone" data-accepts="formato">
+                                FORMATO DE TEXTO
+                                <small style="display: block; margin-top: 5px;">Herramientas para cambiar la apariencia
+                                    del texto</small>
+                            </div>
+                            <div class="drop-zone" data-accepts="archivo">
+                                OPERACIONES DE ARCHIVO
+                                <small style="display: block; margin-top: 5px;">Acciones para manejar documentos</small>
+                            </div>
+                            <div class="drop-zone" data-accepts="diseño">
+                                DISEÑO Y LAYOUT
+                                <small style="display: block; margin-top: 5px;">Herramientas de estructuración</small>
+                            </div>
+                            <div class="drop-zone" data-accepts="insertar">
+                                INSERTAR ELEMENTOS
+                                <small style="display: block; margin-top: 5px;">Agregar contenido multimedia</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="resetDragGame()">🔄 Reiniciar Juego</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="modulo.js"></script>
+
+</html>

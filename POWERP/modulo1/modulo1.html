@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 1 - PowerPoint</title>
+    <link rel="stylesheet" href="modulo1.css">
+</head>
+
+<body>
+    <header>
+        <a id="p2" href="../../index.html"><img id="logo" src="../../POWERP/img/logx.png" alt=""></a>
+        <nav>
+            <a class="m2" href="../powerp.html">Atras</a>
+        </nav>
+    </header>
+
+    <div class="contenedor-modulo">
+        <h1 class="titulo-modulo">INTRODUCCIÓN A POWER POINT</h1>
+
+        <section class="video-section">
+            <div class="video-wrapper">
+                <video id="powerpoint-video" class="responsive-video" controls>
+                    <source src="power point editado (2).mov" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+            <div class="video-info-box">
+                <h2 class="video-title">¡Aprende PowerPoint de forma divertida!</h2>
+                <p class="video-description">
+                    Este video es una introducción completa a los conceptos básicos de PowerPoint, desde la creación de
+                    diapositivas hasta la adición de animaciones.
+                </p>
+            </div>
+        </section>
+        <div class="game-container">
+            <div class="score-panel">
+                <div>🏆 Puntos: <span id="score">0</span></div>
+                <div class="level-indicator">Nivel: <span id="level">Principiante</span></div>
+                <div>📊 Juego: <span id="current-game">Quiz PowerPoint</span></div>
+            </div>
+
+            <div class="game-nav">
+                <button class="nav-btn active" onclick="switchGame('quiz')">🧠 Quiz PowerPoint</button>
+                <button class="nav-btn" onclick="switchGame('match')">🔗 Relacionar Conceptos</button>
+                <button class="nav-btn" onclick="switchGame('slide')">🖼️ Diseño de Diapositivas</button>
+                <button class="nav-btn" onclick="switchGame('tresenraya')">❌ Tres en Raya</button>
+            </div>
+
+            <div class="game-area">
+                <div id="quiz-game" class="game-section">
+                    <div class="quiz-question" id="quiz-question">
+                        ¡Cargando pregunta...!
+                    </div>
+                    <div class="quiz-options" id="quiz-options">
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="nextQuestion()" id="next-question" style="display: none;">
+                            Siguiente Pregunta ➡️
+                        </button>
+                    </div>
+                </div>
+
+                <div id="match-game" class="game-section game-hidden">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <h2>🔗 Relaciona Conceptos de PowerPoint</h2>
+                        <p style="font-size: 18px;">Arrastra cada término a su definición correcta</p>
+                    </div>
+
+                    <div class="match-container">
+                        <div class="terms-column">
+                            <h3>Términos</h3>
+                            <div class="match-term" draggable="true" data-match="1">Diapositiva</div>
+                            <div class="match-term" draggable="true" data-match="2">Plantilla</div>
+                            <div class="match-term" draggable="true" data-match="3">Transición</div>
+                            <div class="match-term" draggable="true" data-match="4">Animación</div>
+                        </div>
+
+                        <div class="definitions-column">
+                            <h3>Definiciones</h3>
+                            <div class="match-definition" data-match="4">Efecto aplicado a elementos individuales en una
+                                diapositiva</div>
+                            <div class="match-definition" data-match="2">Diseño predefinido para presentaciones</div>
+                            <div class="match-definition" data-match="3">Efecto al cambiar entre diapositivas</div>
+                            <div class="match-definition" data-match="1">Página individual de una presentación</div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="checkMatchGame()">✅ Verificar</button>
+                        <button class="nav-btn" onclick="resetMatchGame()">🔄 Reiniciar</button>
+                    </div>
+                </div>
+
+                <div id="slide-game" class="game-section game-hidden">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <h2>🖼️ Diseña tu Diapositiva</h2>
+                        <p style="font-size: 18px;">Arrastra los elementos para crear una diapositiva atractiva</p>
+                    </div>
+
+                    <div class="slide-design-area">
+                        <div class="slide-preview">
+                            <div class="slide-dropzone" id="title-dropzone"></div>
+                            <div class="slide-dropzone" id="content-dropzone"></div>
+                            <div class="slide-dropzone" id="image-dropzone"></div>
+                        </div>
+
+                        <div class="slide-elements">
+                            <div class="slide-element" draggable="true" data-type="title">Título Principal</div>
+                            <div class="slide-element" draggable="true" data-type="subtitle">Subtítulo</div>
+                            <div class="slide-element" draggable="true" data-type="bullet">Lista con viñetas</div>
+                            <div class="slide-element" draggable="true" data-type="image">Imagen</div>
+                            <div class="slide-element" draggable="true" data-type="chart">Gráfico</div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="checkSlideDesign()">✅ Verificar Diseño</button>
+                        <button class="nav-btn" onclick="resetSlideDesign()">🔄 Reiniciar</button>
+                    </div>
+                </div>
+
+                <div id="tresenraya-game" class="game-section game-hidden">
+                    <div class="containerX">
+                        <h1>Tres en Raya + PowerPoint Quiz</h1>
+
+                        <div id="modo-selector">
+                            <h2>Selecciona modo:</h2>
+                            <button onclick="iniciarJuego('facil')">Fácil (IA 30%)</button>
+                            <button onclick="iniciarJuego('normal')">Normal (IA 50%)</button>
+                            <button onclick="iniciarJuego('dificil')">Difícil (IA 80%)</button>
+                        </div>
+
+                        <div id="juego-container" style="display: none;">
+                            <p id="turno">Turno: Jugador X (⚡)</p>
+                            <div id="pregunta-container"></div>
+                            <div id="tablero"></div>
+                            <button onclick="reiniciarJuegoTresEnRaya()" class="btn-reiniciar">Reiniciar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="modulo.js"></script>
+
+</html>

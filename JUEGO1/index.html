@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado del Programador</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    
+    <!-- Fondo abstracto -->
+    <div class="background-canvas">
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+        <div class="floating-orb orb-4"></div>
+    </div>
+
+    <div class="container">
+        <!-- Panel de instrucciones -->
+        <div class="instructions-panel">
+            <h2>💻 Cómo Jugar</h2>
+            
+            <div class="instruction-item">
+                <div class="instruction-icon icon-purple">1</div>
+                <span>Adivina la palabra oculta</span>
+            </div>
+            
+            <div class="instruction-item">
+                <div class="instruction-icon icon-blue">2</div>
+                <span>Haz clic en las letras para probarlas</span>
+            </div>
+            
+            <div class="instruction-item">
+                <div class="instruction-icon icon-pink">3</div>
+                <span>Cada error dibuja una parte del ahorcado</span>
+            </div>
+            
+            <div class="instruction-item">
+                <div class="instruction-icon icon-yellow">⚠</div>
+                <span>¡Tienes máximo 6 intentos para el dibujo!</span>
+            </div>
+
+            <div class="objective-section">
+                <h2>🎯 Objetivo</h2>
+                <p>Descifra la palabra antes de que se complete el dibujo. Usa tu conocimiento técnico para adivinar las letras correctas y salvar al programador del bug fatal.</p>
+            </div>
+            <a href="../index.html" class="linq">Inicio</a>
+        </div>
+
+        <!-- Área principal del juego -->
+        <div class="game-area">
+            <h1 class="game-title">AHORCADO</h1>
+            
+            <div class="drawing-area">
+                <div class="hangman-container">
+                    <!-- Horca -->
+                    <div class="gallows-part gallows-base"></div>
+                    <div class="gallows-part gallows-vertical"></div>
+                    <div class="gallows-part gallows-horizontal"></div>
+                    <div class="gallows-part gallows-rope"></div>
+                    
+                    <!-- Personaje -->
+                    <div class="stickman-part head"></div>
+                    <div class="stickman-part body"></div>
+                    <div class="stickman-part left-arm"></div>
+                    <div class="stickman-part right-arm"></div>
+                    <div class="stickman-part left-leg"></div>
+                    <div class="stickman-part right-leg"></div>
+                </div>
+            </div>
+
+            <div class="game-info">
+                <div class="word-display" id="word-display"></div>
+                <div class="message" id="message">¡Comienza !</div>
+            </div>
+
+            <div class="letters-container" id="letters-container"></div>
+        </div>
+    </div>
+
+    <!-- Modal de fin de juego -->
+    <div class="game-end-modal" id="game-end-modal">
+        <div class="modal-content">
+            <h2 class="modal-title" id="modal-title"></h2>
+            <p class="modal-word" id="modal-word"></p>
+            <button class="restart-btn" id="restart-btn">Intentar de  Nuevo</button>
+        </div>
+    </div>
+
+</body>
+<script src="logica.js"></script>
+</html>

@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face {
+    font-family: 'pixel';
+    src: url(../FUENTES/AVENGEANCE\ HEROIC\ AVENGER.ttf);
+
+}
+
+@font-face {
+    font-family: 'texto';
+    src: url(../FUENTES/Coolvetica\ Rg.otf);
+
+}
+
+@font-face {
+    font-family: 'titulooffice';
+    src: url(../FUENTES/AVENGEANCE\ HEROIC\ AVENGER.ttf);
+}
+
+@font-face {
+    font-family: 'tarjetas';
+    src: url(../FUENTES/kindergarten.ttf);
+}
+
+@font-face {
+    font-family: 'decoracion1';
+    src: url(../FUENTES/Crushed\ Candy.otf);
+}
+
+@font-face {
+    font-family: 'decoracion2';
+    src: url(../FUENTES/JugendstilOrnamente.ttf);
+}
+
+@font-face {
+    font-family: 'decoracion3';
+    src: url(../FUENTES/ARTESANIA\ display.otf);
+}
+body{
+    background-color: black;
+}
+
+
+
+
+#p1 {
+    width: 5%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+header {
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(5px);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo {
+    width: 150px;
+
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+.m2 {
+    text-decoration: none;
+    font-family: 'pixel', sans-serif;
+    font-size: 2rem;
+
+    color: aliceblue;
+    transition: background 0.3s, transform 0.3s;
+
+    background: linear-gradient(135deg,
+            rgb(244, 61, 15) 0%,
+            rgb(201, 32, 32)20%,
+            rgb(244, 61, 15) 35%,
+            rgb(201, 32, 32) 50%,
+            rgb(244, 61, 15) 70%,
+            rgb(201, 32, 32) 85%,
+           rgb(244, 61, 15)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.m2:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg,
+            rgb(201, 54, 32) 0%,
+           rgb(201, 32, 32)20%,
+            rgb(226, 109, 46) 35%,
+            rgb(201, 32, 32) 50%,
+            rgb(169, 41, 41) 70%,
+            rgb(201, 54, 32) 85%,
+            rgb(201, 32, 32)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fondoexcel {
+    background-image: url(img/182633.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    background-size: cover;
+    height: 60vh;
+}
+.separador ul {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+.separador li {
+    margin: 10px 0; 
+}
+.separador{
+    margin-left: -1.5%;
+    display: flex;
+    gap: 15px;
+}
+
+#excelito1 {
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 20%;
+}
+
+.excelito {
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+#t3 {
+    color: rgb(244, 61, 15);
+    font-family: 'decoracion3';
+    font-size: 55px;
+}
+
+#t4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: aliceblue;
+}
+
+ul {
+    color: aliceblue;
+    margin-top: 5%;
+    margin-left: 2%;
+    font-size: 25px;
+}
+.separador{
+    display: flex;
+    gap: 15px;
+}
+.btn5{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-family: 'decoracion3';
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #0236855b;
+}
+.btn5:hover {
+  background-color: rgb(244, 61, 15);
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+}
+.btn6 {
+    margin-top: 5%;
+    border: none;
+    background-color: rgb(133, 2, 2);
+    border-radius: 5px;
+    padding: 0%;
+    width: 20%;
+    height: 4vh;
+    color: aliceblue;
+    font-family: 'decoracion3';
+    font-size: 20px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: black;
+    height: 4.9vh;
+    color: aliceblue;
+    padding-top: 6%;
+    font-size: 25px;
+}
+
+#fote2 {
+    padding-top: 1%;
+    margin-left: 1%;
+    font-size: 20px;
+}

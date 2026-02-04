@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500&display=swap');
+
+:root {
+    --neon-orange: #ff8c00;
+    --neon-purple: #9c27b0;
+    --dark-bg: #050505;
+}
+
+body {
+    background: radial-gradient(circle at center, #1b0c24 0%, #000 100%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(0,0,0,0.8);
+    border-bottom: 2px solid var(--neon-orange);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+}
+
+.logo-top { width: 100px; }
+
+.nav-links a, .btn-logout {
+    color: var(--neon-orange);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.dashboard-container {
+    display: flex;
+    padding: 80px 5%;
+    gap: 40px;
+}
+
+/* Sidebar Estilo */
+.sidebar-user { flex: 1; max-width: 300px; }
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--neon-orange);
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.1);
+}
+
+.avatar-glow img {
+    width: 110px;
+    border-radius: 50%;
+    border: 2px solid var(--neon-purple);
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+
+#user-name {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-orange);
+    font-size: 1.3rem;
+    margin: 20px 0 5px;
+}
+
+/* Grid de Módulos */
+.modules-grid-area { flex: 3; }
+.neon-title {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-orange);
+    text-shadow: 0 0 10px var(--neon-orange);
+    margin-bottom: 30px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.course-item {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.course-item:hover {
+    border-color: var(--neon-purple);
+    transform: translateY(-5px);
+}
+
+.c-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.c-bar {
+    width: 100%;
+    height: 8px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.c-fill {
+    height: 100%;
+    width: 0%; /* Dinámico */
+    background: linear-gradient(90deg, var(--neon-orange), var(--neon-purple));
+    box-shadow: 0 0 10px var(--neon-orange);
+    transition: width 1.5s ease-in-out;
+}

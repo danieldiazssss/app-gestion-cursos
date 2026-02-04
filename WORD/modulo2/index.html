@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 2 - Formato de Texto en Word</title>
+    <link rel="shortcut icon" href="../archivo-documento-word-9995636-8082017.webp" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a id="p2" href="../../index.html"><img id="logo" src="../../IMG/LOGIN.png" alt=""></a>
+        <nav>
+            <a class="m2" href="../word.html">Atras</a>
+        </nav>
+    </header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="contenedor-modulo">
+
+        <h1 class="titulo-modulo">FORMATO DE TEXTO EN WORD</h1>
+        <div class="video-container">
+            <div class="video-header">
+                <h1 class="video-title">Video Destacado</h1>
+                <p class="video-subtitle">Aprende a dar formato profesional a tus documentos</p>
+            </div>
+
+            <div class="video-wrapper">
+                <video id="myVideo" controls
+                    poster="https://via.placeholder.com/800x450/667eea/ffffff?text=Formato+de+Texto">
+                    <source src="formato-texto-word.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+                <div class="video-overlay">
+                    <button class="play-button" onclick="togglePlay()"></button>
+                </div>
+            </div>
+
+            <div class="video-controls">
+                <button class="control-btn" onclick="toggleFullscreen()">Pantalla Completa</button>
+                <button class="control-btn" onclick="toggleMute()">Silenciar</button>
+                <button class="control-btn" onclick="changeSpeed()">Velocidad</button>
+            </div>
+        </div>
+        
+        <div class="game-container">
+            <div class="score-panel">
+                <div>🏆 Puntos: <span id="score">0</span></div>
+                <div class="level-indicator">Nivel: <span id="level">Principiante</span></div>
+                <div> Juego: <span id="current-game">Quiz</span></div>
+            </div>
+
+            <div class="game-nav">
+                <button class="nav-btn active" onclick="switchGame('quiz')"> Quiz Formato</button>
+                <button class="nav-btn" onclick="switchGame('memory')"> Memoria Formatos</button>
+                <button class="nav-btn" onclick="switchGame('simulator')"> Simulador Word</button>
+                <button class="nav-btn" onclick="switchGame('drag')"> Arrastrar y Soltar</button>
+            </div>
+
+            <div class="game-area">
+                <!-- Quiz Game -->
+                <div id="quiz-game" class="game-section">
+                    <div class="quiz-question" id="quiz-question">
+                        ¡Cargando pregunta...!
+                    </div>
+                    <div class="quiz-options" id="quiz-options">
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="nextQuestion()" id="next-question" style="display: none;">
+                            Siguiente Pregunta
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Memory Game -->
+                <div id="memory-game" class="game-section game-hidden">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <h2 style="color: #00d4ff;">Encuentra las parejas de formatos de texto</h2>
+                        <p style="font-size: 18px;">Memoriza las herramientas de formato y sus funciones</p>
+                        <div>⏱️ Tiempo: <span id="memory-time">0</span>s | Intentos: <span id="memory-attempts">0</span>
+                        </div>
+                    </div>
+                    <div class="memory-grid" id="memory-grid">
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="resetMemoryGame()"> Nuevo Juego</button>
+                    </div>
+                </div>
+
+                <!-- Simulator Game -->
+                <div id="simulator-game" class="game-section game-hidden">
+                    <div style="margin-bottom: 20px;">
+                        <h2 style="color: #00d4ff; text-align: center;">💻 Simulador de Formato de Texto</h2>
+                        <p style="text-align: center; font-size: 18px;">¡Practica el formato de texto como en Word real!</p>
+                    </div>
+
+                    <div class="word-simulator">
+                        <div class="word-ribbon">
+                            <div class="ribbon-tool" onclick="formatText('bold')" title="Negrita">
+                                <strong>B</strong>
+                            </div>
+                            <div class="ribbon-tool" onclick="formatText('italic')" title="Cursiva">
+                                <em>I</em>
+                            </div>
+                            <div class="ribbon-tool" onclick="formatText('underline')" title="Subrayado">
+                                <u>U</u>
+                            </div>
+                            <div class="ribbon-tool" onclick="changeTextColor('red')" style="color: red;"
+                                title="Color Rojo">
+                                A
+                            </div>
+                            <div class="ribbon-tool" onclick="changeTextColor('blue')" style="color: blue;"
+                                title="Color Azul">
+                                A
+                            </div>
+                            <div class="ribbon-tool" onclick="changeTextColor('green')" style="color: green;"
+                                title="Color Verde">
+                                A
+                            </div>
+                            <div class="ribbon-tool" onclick="increaseFontSize()" title="Aumentar tamaño">
+                                A+
+                            </div>
+                            <div class="ribbon-tool" onclick="decreaseFontSize()" title="Reducir tamaño">
+                                A-
+                            </div>
+                            <div class="ribbon-tool" onclick="alignText('left')" title="Alinear izquierda">
+                                ←
+                            </div>
+                            <div class="ribbon-tool" onclick="alignText('center')" title="Centrar">
+                                ↔
+                            </div>
+                            <div class="ribbon-tool" onclick="alignText('right')" title="Alinear derecha">
+                                →
+                            </div>
+                            <div class="ribbon-tool" onclick="formatText('justifyFull')" title="Justificar">
+                                ≡
+                            </div>
+                            <div class="ribbon-tool" onclick="changeFontFamily('Arial')" title="Fuente Arial">
+                                Aa
+                            </div>
+                            <div class="ribbon-tool" onclick="changeFontFamily('Times New Roman')" title="Fuente Times">
+                                Aa
+                            </div>
+                            <div class="ribbon-tool" onclick="formatText('strikeThrough')" title="Tachado">
+                                S
+                            </div>
+                            <div class="ribbon-tool" onclick="clearFormatting()" title="Limpiar formato">
+                                ❌
+                            </div>
+                        </div>
+
+                        <div class="document-area">
+                            <div class="editable-content" id="document-content" contenteditable="true">
+                                ¡Bienvenido al simulador de formato de texto!
+
+                                Prueba estas acciones:
+                                1. Selecciona texto y hazlo NEGRITA
+                                2. Cambia el COLOR del texto
+                                3. Prueba la CURSIVA y el SUBRAYADO
+                                4. Alinea el texto al CENTRO o JUSTIFICADO
+                                5. Aumenta el TAMAÑO de letra
+                                6. Cambia la FUENTE del texto
+                                7. Aplica formato TACHADO
+
+                                ¡Experimenta con todas las herramientas! Cada acción te dará puntos extra.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="saveDocument()"> Guardar Documento</button>
+                        <button class="nav-btn" onclick="resetDocument()"> Nuevo Documento</button>
+                    </div>
+                </div>
+
+                <!-- Drag Game -->
+                <div id="drag-game" class="game-section game-hidden">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h2 style="color: #00d4ff;"> Arrastra los formatos a su función correcta</h2>
+                        <p style="font-size: 18px;">Identifica qué hace cada herramienta de formato</p>
+                    </div>
+
+                    <div class="drag-container">
+                        <div class="tools-bank">
+                            <h3 style="color: #00d4ff; text-align: center; margin-bottom: 20px;"> Herramientas de Formato</h3>
+                            <div class="drag-tool" draggable="true" data-category="negrita"> Negrita</div>
+                            <div class="drag-tool" draggable="true" data-category="cursiva"> Cursiva</div>
+                            <div class="drag-tool" draggable="true" data-category="subrayado"> Subrayado</div>
+                            <div class="drag-tool" draggable="true" data-category="tachado"> Tachado</div>
+                            <div class="drag-tool" draggable="true" data-category="color"> Color de texto</div>
+                            <div class="drag-tool" draggable="true" data-category="tamaño"> Tamaño de fuente</div>
+                            <div class="drag-tool" draggable="true" data-category="fuente"> Tipo de fuente</div>
+                            <div class="drag-tool" draggable="true" data-category="alineacion"> Alineación</div>
+                        </div>
+
+                        <div class="word-interface">
+                            <h3 style="text-align: center; margin-bottom: 20px;">🖥️ Funciones de Formato</h3>
+                            <div class="drop-zone" data-accepts="negrita">
+                                RESALTAR TEXTO
+                                <small style="display: block; margin-top: 5px;">Hace el texto más grueso y visible</small>
+                            </div>
+                            <div class="drop-zone" data-accepts="cursiva">
+                                ENFATIZAR TEXTO
+                                <small style="display: block; margin-top: 5px;">Inclina el texto para dar énfasis</small>
+                            </div>
+                            <div class="drop-zone" data-accepts="subrayado">
+                                SUBRAYAR TEXTO
+                                <small style="display: block; margin-top: 5px;">Añade una línea debajo del texto</small>
+                            </div>
+                            <div class="drop-zone" data-accepts="tachado">
+                                TACHAR TEXTO
+                                <small style="display: block; margin-top: 5px;">Muestra texto como eliminado</small>
+                            </div>
+                            <div class="drop-zone" data-accepts="color">
+                                CAMBIAR COLOR
+                                <small style="display: block; margin-top: 5px;">Modifica el color del texto</small>
+                            </div>
+                            <div class="drop-zone" data-accepts="tamaño">
+                                AJUSTAR TAMAÑO
+                                <small style="display: block; margin-top: 5px;">Controla qué tan grande es el texto</small>
+                            </div>
+                            <div class="drop-zone" data-accepts="fuente">
+                                CAMBIAR FUENTE
+                                <small style="display: block; margin-top: 5px;">Selecciona el estilo de letra</small>
+                            </div>
+                            <div class="drop-zone" data-accepts="alineacion">
+                                ALINEAR TEXTO
+                                <small style="display: block; margin-top: 5px;">Posiciona texto a izquierda, centro o derecha</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="nav-btn" onclick="resetDragGame()">🔄 Reiniciar Juego</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="logica.js"></script>
+
+</html>

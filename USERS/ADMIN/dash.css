@@ -1,0 +1,324 @@
+@font-face {
+    font-family: 'mia';
+    src: url(/FUENTES/ARTESANIA\ display.otf);
+}
+
+body {
+    background-image: url(remolino-de-colores-abstracto_3840x2160_xtrafondos.com.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+}
+
+.table tbody tr td {
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.navbar-brand {
+    font-family: 'mia';
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #317dd3 0%, #d903ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(214, 3, 255, 0.5);
+}
+
+.container-main {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(214, 3, 255, 0.5);
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#nose1 {
+    width: 12%;
+}
+
+#m1 {
+    color: rgba(49, 125, 211, 0.8);
+}
+
+#m2 {
+    margin-left: 1%;
+    color: rgba(214, 3, 255, 0.5);
+}
+
+h2 {
+    font-family: 'mia';
+    margin-bottom: 25px;
+}
+
+.table {
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.table-dark {
+    background: linear-gradient(135deg, rgba(49, 125, 211, 0.8) 0%, rgba(217, 3, 255, 0.8) 100%);
+    color: aliceblue;
+}
+
+.table-hover tbody tr:hover {
+    color: aliceblue;
+    background-color: rgba(214, 3, 255, 0.2);
+}
+
+.btn-primary {
+    background-color: #822cb3;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #d903ff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(214, 3, 255, 0.4);
+}
+
+#botnx {
+    background: linear-gradient(135deg, #317dd3 0%, #d903ff 100%);
+    -webkit-background-clip: text;
+    box-shadow: 0 5px 15px rgba(214, 3, 255, 0.4);
+    background-clip: text;
+}
+
+.btn-danger {
+    border: #317dd3;
+    background: #2c7db3;
+    transition: all 0.3s;
+}
+
+.btn-danger:hover {
+    background: #2c7db3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(42, 187, 231, 0.4);
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid #d903ff;
+    color: white;
+}
+
+.modal-header {
+    border-bottom: 1px solid #317dd3;
+}
+
+.modal-footer {
+    border-top: 1px solid #317dd3;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #317dd3;
+    color: white;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #d903ff;
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(217, 3, 255, 0.25);
+}
+
+.progress {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 20px;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #317dd3, #d903ff);
+}
+
+.badge {
+    font-size: 0.9em;
+    background: linear-gradient(135deg, #317dd3, #d903ff);
+}
+
+/* ========================================
+   ESTILOS PARA TARJETAS DE ESTADÍSTICAS
+   ======================================== */
+.stats-card {
+    background: linear-gradient(135deg, rgba(49, 125, 211, 0.8) 0%, rgba(217, 3, 255, 0.8) 100%);
+    color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(214, 3, 255, 0.5);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(217, 3, 255, 0.3);
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(214, 3, 255, 0.7);
+}
+
+.stats-card i {
+    font-size: 2.5rem;
+    opacity: 0.7;
+}
+
+.stats-card h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    font-family: 'mia';
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.stats-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Variantes de colores para las tarjetas */
+.stats-card-success {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.8) 0%, rgba(32, 201, 151, 0.8) 100%);
+    box-shadow: 0 0 20px rgba(32, 201, 151, 0.5);
+}
+
+.stats-card-success:hover {
+    box-shadow: 0 10px 30px rgba(32, 201, 151, 0.7);
+}
+
+.stats-card-warning {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.8) 0%, rgba(255, 152, 0, 0.8) 100%);
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.5);
+}
+
+.stats-card-warning:hover {
+    box-shadow: 0 10px 30px rgba(255, 152, 0, 0.7);
+}
+
+.stats-card-info {
+    background: linear-gradient(135deg, rgba(23, 162, 184, 0.8) 0%, rgba(19, 132, 150, 0.8) 100%);
+    box-shadow: 0 0 20px rgba(23, 162, 184, 0.5);
+}
+
+.stats-card-info:hover {
+    box-shadow: 0 10px 30px rgba(23, 162, 184, 0.7);
+}
+
+/* ========================================
+   ESTILOS PARA CONTENEDORES DE GRÁFICOS
+   ======================================== */
+.chart-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(214, 3, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(217, 3, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.chart-container:hover {
+    box-shadow: 0 0 30px rgba(214, 3, 255, 0.5);
+    border-color: rgba(217, 3, 255, 0.4);
+}
+
+.chart-title {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(49, 125, 211, 0.5);
+    font-family: 'mia';
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #317dd3 0%, #d903ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.chart-title i {
+    margin-right: 10px;
+    color: #d903ff;
+}
+
+/* ========================================
+   ESTILOS PARA TÍTULOS DE SECCIÓN
+   ======================================== */
+.section-title {
+    font-family: 'mia';
+    font-size: 1.8rem;
+    margin: 30px 0 20px 0;
+    padding-left: 15px;
+    border-left: 4px solid #d903ff;
+    text-shadow: 0 2px 10px rgba(217, 3, 255, 0.5);
+}
+
+/* ========================================
+   ANIMACIONES Y EFECTOS ADICIONALES
+   ======================================== */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px rgba(214, 3, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(214, 3, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(214, 3, 255, 0.3);
+    }
+}
+
+.chart-container {
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .stats-card {
+        margin-bottom: 15px;
+    }
+    
+    .stats-card h3 {
+        font-size: 2rem;
+    }
+    
+    .chart-container {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    #nose1 {
+        width: 25%;
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    .stats-card i {
+        font-size: 2rem;
+    }
+    
+    .chart-title {
+        font-size: 1rem;
+    }
+}
